@@ -1,0 +1,28 @@
+<!-- <a routerLink="/">Posts</a> | -->
+<a routerLink="/fork-join">Fork Join</a> |
+<a routerLink="/merge-map">Merge Map</a> |
+<a routerLink="/concat-map">Concat Map</a> |
+<a routerLink="/switch-map">Switch Map</a> |
+<a routerLink="/exhaust-map">Exhaust Map</a> |
+<router-outlet />
+
+<h3>Posts in RxJS Basic Component</h3>
+
+<table>
+  <thead>
+    <th>Title</th>
+    <th>Body</th>
+    <th>Views</th>
+    <th>UserId</th>
+  </thead>
+  <tbody>
+    @for (post of posts$ | async; track post.id) {
+    <tr>
+      <td>{{post.title}}</td>
+      <td>{{post.body}}</td>
+      <td>{{post.views}}</td>
+      <td>{{post.userId}}</td>
+    </tr>
+    }
+  </tbody>
+</table>
