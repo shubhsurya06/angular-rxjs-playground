@@ -1,6 +1,6 @@
 import { Component, OnInit, inject, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { from, exhaustMap, Subject } from 'rxjs';
+import { from, exhaustMap, Subject, switchMap } from 'rxjs';
 import { FormsModule } from '@angular/forms';
 
 @Component({

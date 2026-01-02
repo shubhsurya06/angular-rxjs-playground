@@ -16,7 +16,7 @@ export class ConcatMap implements OnInit {
   }
 
   useConcatMap() {
-    from([1, 2, 3, 4, 5])
+    from([1, 20000, 3, 4, 5])
       .pipe(
         concatMap((id: number) =>
           this.http.get(`https://dummyjson.com/users/${id}`)

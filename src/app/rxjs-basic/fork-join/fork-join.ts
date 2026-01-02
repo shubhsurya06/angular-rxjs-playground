@@ -18,7 +18,7 @@ export class ForkJoin implements OnInit {
   useForkJoin() {
     forkJoin({
       user1: this.http.get('https://dummyjson.com/users/1'),
-      user2: this.http.get('https://dummyjson.com/users/21212'),
+      user2: this.http.get('https://dummyjson.com/users/2'),
       user3: this.http.get('https://dummyjson.com/users/3'),
       user4: this.http.get('https://dummyjson.com/users/4'),
     }).subscribe({

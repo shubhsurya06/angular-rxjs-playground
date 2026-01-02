@@ -1,0 +1,31 @@
+<br />
+<br />
+
+<form [formGroup]="loginForm" (ngSubmit)="submit()">
+    <input type="email" formControlName="email" placeholder="Enter Email"><br />
+    <!-- <br /> -->
+    <p>
+        @if (getFormControl('email')?.invalid && (getFormControl('email')?.touched || getFormControl('email')?.dirty)) {
+        @if (getFormControl('email')?.errors?.['required']) {
+        <span style="color: red">Please enter Email.</span>
+        }
+        @if (getFormControl('email')?.errors?.['email']) {
+        <span style="color: red">Please enter Vaid Email Address.</span>
+        }
+        }
+    </p>
+    <br />
+    <input type="password" formControlName="password" placeholder="Enter Password"><br />
+    <!-- <br /> -->
+    @if (getFormControl('password')?.invalid && (getFormControl('password')?.touched || getFormControl('password')?.dirty)) {
+    @if (getFormControl('password')?.errors?.['required']) {
+    <span style="color: red">Please enter password.</span>
+    }
+    @if (getFormControl('password')?.errors?.['minlength']) {
+    <span style="color: red">Please enter 6 digits password.</span>
+    }
+    }
+    <br />
+    <button type="submit" [disabled]="loginForm.invalid">Submit</button> | <button type="button" (click)="reset()">Reset</button>
+
+</form>

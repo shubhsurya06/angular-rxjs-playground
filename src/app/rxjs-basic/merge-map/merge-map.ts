@@ -16,7 +16,7 @@ export class MergeMap implements OnInit {
   }
 
   useMergeMap() {
-    from([11452, 2, 3, 4])
+    from([11111, 2, 3, 4])
       .pipe(
         mergeMap((id: number) =>
           this.http.get(`https://dummyjson.com/users/${id}`)
